@@ -1,12 +1,13 @@
 # function below is used to check whether if the input date is considered a holiday
-# please note that holidays have to be specified manually
+# please note that the list of holidays will need to be provided manually
+# if a holiday falls on a non-business day (weekends), then the observed day should be provided
 function IsHoliday([DateTime]$InputDate) {
-    [string[]]$Holidays =
+    [string[]]$Holidays = # examples provided are for the year 2021
         '01/01/2021', # New Years
         '01/18/2021', # MLK
         '02/15/2021', # President's day
         '05/31/2021', # Memorial day
-        '07/05/2021', # Independence day
+        '07/05/2021', # Independence day (observed)
         '09/06/2021', # Labor's day
         '11/25/2021', # Thanksgiving
         '11/26/2021', # Black Friday
